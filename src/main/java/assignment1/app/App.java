@@ -7,7 +7,6 @@
  * Inject 2 Students into teacher
  * Show the teacher and her students information in the app.java class. 
  * 
- * 
  * CONFIGURATION CLASS USED
  */
 
