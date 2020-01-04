@@ -1,48 +1,47 @@
 package assignment1.model;
 
-import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
-
-@Component
-@Qualifier("teacherBean")
 public class Teacher {
-
-	// values
-	private int teachId;
-	private int teachName;
-	private List<String> students;
-	@Autowired // autowired annotation will wire Student1/Student2 to Teacher
-	Student1 student1;
-	Student2 student2;
-
-	// constructor
-	public Teacher() {
-		super();
+	
+	//values
+	int teacherId;
+	String teacherName;
+	Student student1;
+	Student student2;
+	
+	//constructors
+	public Teacher(int teacherId, String teacherName, Student student1, Student student2) {
+		this.teacherId = teacherId;
+		this.teacherName = teacherName;
+		this.student1 = student1;
+		this.student2 = student2;
+	}
+	
+	//methods
+	public Student getStudent1() {
+		return student1;
+	}
+	
+	public Student getStudent2() {
+		return student2;
 	}
 
-	public Teacher(int teachId, int teachName) {
-		super();
-		this.teachId = teachId;
-		this.teachName = teachName;
+	public int getTeacherId() {
+		return teacherId;
 	}
 
-	// methods
-	public int getTeachId() {
-		return teachId;
+	public void setTeacherId(int teacherId) {
+		this.teacherId = teacherId;
 	}
 
-	public void setTeachId(int teachId) {
-		this.teachId = teachId;
+	public String getTeacherName() {
+		return teacherName;
 	}
 
-	public int getTeachName() {
-		return teachName;
+	public void setTeacherName(String teacherName) {
+		this.teacherName = teacherName;
 	}
-
-	public void setTeachName(int teachName) {
-		this.teachName = teachName;
-	}
+	
+	
+	
 }

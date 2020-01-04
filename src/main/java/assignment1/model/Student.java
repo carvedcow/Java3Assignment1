@@ -1,18 +1,14 @@
 package assignment1.model;
 
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 
-@Component
-@Qualifier("student1Bean")
-public class Student1 {
+public class Student {
 
 	// values
 	private int stdId;
 	private String stdName;
 
 	// constructor
-	public Student1(int stdId, String stdName) {
+	public Student(int stdId, String stdName) {
 		super();
 		this.stdId = stdId;
 		this.stdName = stdName;
@@ -22,7 +18,6 @@ public class Student1 {
 	public int getStdId() {
 		return stdId;
 	}
-
 	public void setStdId(int stdId) {
 		this.stdId = stdId;
 	}
@@ -30,7 +25,6 @@ public class Student1 {
 	public String getStdName() {
 		return stdName;
 	}
-
 	public void setStdName(String stdName) {
 		this.stdName = stdName;
 	}
